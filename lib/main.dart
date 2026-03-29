@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'app.dart';
 
-void main() {
-  runApp(const MyApp() as Widget);
-}
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp {
-  const MyApp();
+  runApp(
+    const ProviderScope(
+      child: App(),
+    )
+  );
 }
 
 
