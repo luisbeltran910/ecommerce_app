@@ -24,9 +24,10 @@ class ApiClient {
         baseUrl: AppConstants.apiUrl,
         connectTimeout: Duration(milliseconds: AppConstants.connectTimeout),
         receiveTimeout: Duration(milliseconds: AppConstants.receiveTimeout),
+        contentType: 'application/json',
+        responseType: ResponseType.json,
         headers: {
-          'Content-Type': 'application/json'
-          'Accept'  'application/json',
+          'Accept':  'application/json',
         },
       ),
     );
